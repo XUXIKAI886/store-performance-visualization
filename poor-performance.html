@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>劣质店铺转化率对比分析</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@1.0.2/dist/chartjs-plugin-annotation.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .color-box.store {
+            background-color: rgba(255, 159, 64, 0.8); /* 橙色表示劣质店铺 */
+        }
+        
+        .analysis {
+            border-left: 4px solid #ff9f40;
+        }
+        
+        .highlight {
+            color: #ff9f40;
+        }
+        
+        .warning-badge {
+            display: inline-block;
+            background-color: #ff9f40;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 14px;
+            margin-left: 10px;
+            position: relative;
+            top: -3px;
+        }
+        
+        /* 品牌标识样式 - 美化版 */
+        .brand-logo {
+            display: inline-block;
+            font-size: 20px;
+            font-weight: bold;
+            color: #2980b9;
+            margin-right: 15px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+            background: linear-gradient(to right, #3498db, #2c3e50);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-family: "Microsoft YaHei", sans-serif;
+            letter-spacing: 1px;
+            border-right: 2px solid #3498db;
+            padding-right: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><span class="brand-logo">呈尚策划</span>下单转化率对比分析 - 近30天走势 <span class="warning-badge">劣质店铺</span></h1>
+        </div>
+        <div class="chart-container">
+            <canvas id="conversionChart"></canvas>
+        </div>
+        <div class="legend">
+            <div class="legend-item">
+                <div class="color-box store"></div>
+                <span>本店铺转化率</span>
+            </div>
+            <div class="legend-item">
+                <div class="color-box industry"></div>
+                <span>商圈同行均值</span>
+            </div>
+        </div>
+        <div class="analysis">
+            <h2>数据分析洞察</h2>
+            <p>• 本店铺30天平均转化率为 <span class="highlight">10.5%</span>，低于行业均值 <span class="highlight">-9.5%</span></p>
+            <p>• 本店铺转化率波动大(±5%)，稳定性差，是典型的<span class="highlight">劣质店铺</span>信号</p>
+            <p>• 30天内多次低于行业均值，缺乏有效的运营策略</p>
+        </div>
+    </div>
+    <script src="poor-store.js"></script>
+</body>
+</html>

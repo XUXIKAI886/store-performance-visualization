@@ -4,11 +4,12 @@
 
 ## 项目概述
 
-本项目包含三种店铺类型的可视化演示：
+本项目包含四种店铺数据的可视化演示：
 
 1. **优质店铺** (index.html) - 转化率稳定且高于行业均值
 2. **劣质店铺** (poor-performance.html) - 转化率远低于行业均值且波动大  
 3. **潜力店铺** (potential-store.html) - 下单人数呈阶梯式上升，有回调但能迅速恢复
+4. **点金推广** (promotion-entry-rate.html) - 点金推广进店率分析，展示店铺进店率高于商圈同行均值
 
 ## 主要功能
 
@@ -26,6 +27,7 @@
    - 优质店铺: `index.html`
    - 劣质店铺: `poor-performance.html` 
    - 潜力店铺: `potential-store.html`
+   - 点金推广: `promotion-entry-rate.html`
 2. 演示开始后，将自动逐日展示数据点，形成动画效果
 3. 动画结束后，系统会自动分析并标注关键数据特征
 
@@ -36,6 +38,7 @@
 - 优质店铺: `script.js` 中的 `generateIndustryData()` 和 `generateStoreData()`
 - 劣质店铺: `poor-store.js` 中的 `generateIndustryData()` 和 `generatePoorStoreData()`
 - 潜力店铺: `potential-store.js` 中的 `generateIndustryData()` 和 `generatePotentialStoreData()`
+- 点金推广: `promotion-entry.js` 中的 `generateStoreEntryRates()` 和 `generateIndustryEntryRates()`
 
 ## 技术栈
 
@@ -51,3 +54,4 @@
 - 数据分析展示
 - 商家经营策略制定
 - 营销团队业绩回顾
+- 推广效果分析与投放优化
